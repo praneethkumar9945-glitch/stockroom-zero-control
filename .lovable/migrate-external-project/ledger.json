@@ -1,0 +1,18 @@
+{
+  "source": "github",
+  "repository": "https://github.com/praneethprx-stack/stockroom-role-hub.git",
+  "revision": "e5fabd4",
+  "capabilities": [
+    {"capability":"application code and routes","source":"GitHub repository; TanStack Start stockroom app","outcome":"migrate","status":"pending","next_action":"Copy source pages, UI, assets, and business logic into this project while retaining target-generated Cloud integrations and pinned TanStack versions."},
+    {"capability":"database schema","source":"drizzle/migrations/0000_gk_mart_init.sql","outcome":"migrate","status":"pending","next_action":"Apply profiles, separate protected user_roles, role helper, user-creation trigger, and shared shop_records schema to Lovable Cloud."},
+    {"capability":"application records","source":"Browser IndexedDB plus the source cloud shop_records mirror; no data export attached","outcome":"migrate","status":"pending","next_action":"Request sanitized CSV or JSON exports for application records after preview; no records are included in the first preview."},
+    {"capability":"authentication identities","source":"Source app email/password and Google accounts; no user export attached","outcome":"migrate","status":"pending","next_action":"Request an export containing original user IDs, verified email addresses, profiles, and roles; migrate identities to Cloud Auth with first-visit email verification and password setup."},
+    {"capability":"authorization and staff roles","source":"Source app role access rules and public.user_roles","outcome":"migrate","status":"pending","next_action":"Preserve role checks and import role assignments only after source user identities are provided and verified."},
+    {"capability":"uploaded file bytes","source":"No application file-storage usage detected in the inspected repository","outcome":"absent","status":"verified","next_action":"None."},
+    {"capability":"external providers","source":"UPI payment deep links and WhatsApp invoice links in app code; no external account credentials detected","outcome":"preserve","status":"pending","next_action":"Preserve the existing links and confirm their preview behavior."},
+    {"capability":"public endpoints, callbacks, webhooks, and schedules","source":"No app-owned endpoints, callbacks, webhooks, or scheduled jobs detected","outcome":"absent","status":"verified","next_action":"None."},
+    {"capability":"secrets","source":"No app-owned secret requirements detected; source platform configuration excluded","outcome":"absent","status":"verified","next_action":"None."},
+    {"capability":"cutover","source":"Old source database and auth are separate from this project's new Lovable Cloud","outcome":"pending","status":"pending","next_action":"Keep the original app available until data and user exports are migrated and verified."},
+    {"capability":"verification","source":"Live preview after code and Cloud schema migration","outcome":"verify","status":"pending","next_action":"Check routes, sign-in, product add/edit with zero, and a representative data write/read; complete identity and record checks after exports arrive."}
+  ]
+}
